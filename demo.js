@@ -1,6 +1,6 @@
 // write a function that takes in minutes, and returns the time in 24hr format
 
-const minutes = [1, 60, 100, 500, 1000, 1120, 1439, 0];
+const minutes = [0,1,100,500,1000,1300,1500,4000,6000];
 
 // start with accepting one
 const printClockFormat = minuteInputs => {
@@ -23,14 +23,12 @@ const printClockFormat = minuteInputs => {
 		minutes+="0"
 	}
 	let amPm = "";
-	let zero = "";
 	let output = "";
 
 	// adding formatting and AM / PM	
 	if (hours < 10) {
 		amPm = "AM";
-		zero = "0";
-		hours = `${zero}${hours}`
+		hours = `0${hours}`
 	} else if (hours > 12){
 		amPm = "PM";
 		hours -= 12;
@@ -46,4 +44,4 @@ const printClockFormat = minuteInputs => {
 };
 
 
-console.log(printClockFormat([0,1,100,500,1000,1300,1500,4000,6000]));
+console.log(printClockFormat(minutes));
