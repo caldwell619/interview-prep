@@ -46,8 +46,7 @@ const determineDays = input => {
 };
 
 const determineMinutes = (input, hours) => {
-	let minutes = ((input / 60).toFixed(2)) - hours;
-	minutes = Math.floor(minutes * 60);
+	let minutes = input % 60
 	//adding formatting
 	if (minutes <= 10) {
 		minutes+="0"
@@ -60,3 +59,42 @@ const determineMinutes = (input, hours) => {
 
 
 console.log(printClockFormat(minutes));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// write a function that takes an array of numbers representing minutes 
+// and return that array with what time a digital clock would show based on the minutes
+
+const minutes = [0,1,60,120,"...",1439];
+
+const output = ["00:00AM", "00:01AM", "01:00AM","02:00AM","...","11:59PM"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
